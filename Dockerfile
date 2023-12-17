@@ -20,8 +20,8 @@ RUN go mod download && go mod verify
 COPY . .
 
 ARG VERSION
-ARG APP_PACKAGE=github.com/patiyan-sukkasem/goapp/cmd/main
-RUN go build -o main cmd/main.go
+ARG APP_PACKAGE=github.com/patiyan-sukkasem/goapp/main
+RUN go build -o main main.go
 
 FROM alpine:3.16
 
